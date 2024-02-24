@@ -39,13 +39,29 @@ Follow these steps to get the application up and running:
 
 Once the application is running, you can interact with it using any API client or tools like Postman. The following endpoints are available:
 
-```
-POST /vehicles: Create a new vehicle.
-GET /vehicles: Retrieve all vehicles.
-GET /vehicles/{id}: Retrieve a specific vehicle by ID.
-PUT /vehicles/{id}: Update a vehicle.
-DELETE /vehicles/{id}: Delete a vehicle.
-PUT /vehicles/{id}/assign-driver/{driverId}: Assign a driver to a vehicle.
-PUT /vehicles/{id}/add-maintenance-task: Add a maintenance task to a vehicle.
-Make sure to replace {id} and {driverId} with the actual ID values when making requests.
-```
+## Endpoints
+
+### Create a Vehicle
+
+- **URL:** `/vehicle`
+- **Method:** `POST`
+- **Request Body:**
+- 
+  ```json
+  {
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2022,
+    "registrationNumber": "ABC123",
+    "status": "Active",
+    "location": "Garage"
+  }
+
+### Get All Vehicles
+- **URL:** `/vehicle`
+- **Method:** `GET`
+
+
+### Get One Vehicle
+- **URL:** `/vehicle/::id`
+- **Method:** `GET`
