@@ -16,8 +16,8 @@ Follow these steps to get the application up and running:
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/sumanbalayar08/nestjs-assignment.git
+  ```
+  git clone https://github.com/sumanbalayar08/nestjs-assignment.git
    ```
 
 2. Navigate to project directory
@@ -33,6 +33,7 @@ Follow these steps to get the application up and running:
 
   ```
   npm run start:dev
+  Server Started at: http://localhost:3000/
   ```
   
 # Usage
@@ -63,5 +64,37 @@ Once the application is running, you can interact with it using any API client o
 
 
 ### Get One Vehicle
-- **URL:** `/vehicle/::id`
+- **URL:** `/vehicle/:id`
 - **Method:** `GET`
+
+### Update One Vehicle
+- **URL:** `/vehicle/:id`
+- **Method:** `PATCH`
+- ```json
+  {
+  "status": "Maintenance",
+  "location": "Workshop"
+  }
+
+### Delete Vehicle
+- **URL:** `/vehicle/:id`
+- **Method:** `DELETE`
+
+### Assign Driver
+- **URL:** `/vehicle/:id/driver`
+- **Method:** `PATCH`
+- ```json
+  {
+  "driverId": "driver123"
+  }
+
+### Add Maintenance Task
+- **URL:** `/vehicle/:id/maintenance-task`
+- **Method:** `PATCH`
+- ```json
+  {
+    "task":{
+        "INITIAL":"bad",
+        "FInal":"good"
+    }
+  }
